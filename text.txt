@@ -1,0 +1,54 @@
+forecast/
+├── backend/                      # Python Flask backend
+│   ├── app/
+│   │   ├── __init__.py          # Flask app initialization
+│   │   ├── config.py            # Configuration settings
+│   │   ├── models/
+│   │   │   └── db_models.py     # SQLAlchemy ORM models
+│   │   ├── routes/
+│   │   │   ├── health.py        # Health check endpoint
+│   │   │   ├── search.py        # Location search endpoint
+│   │   │   └── weather.py       # Main weather endpoints
+│   │   └── services/
+│   │       ├── cache.py         # Caching service
+│   │       ├── ml_service.py    # ML prediction service
+│   │       └── weather_api.py   # OpenWeatherMap API wrapper
+│   ├── ml/                       # Machine learning models
+│   │   ├── data_pipeline.py     # Data processing pipeline
+│   │   ├── lstm_model.py        # LSTM model architecture
+│   │   ├── train.py             # Model training script
+│   │   └── saved_models/
+│   │       └── lstm_weather.keras
+│   ├── instance/                 # Instance folder for local configs
+│   ├── requirements.txt          # Python dependencies
+│   └── run.py                   # Application entry point
+│
+├── frontend/                     # React Vite frontend
+│   ├── src/
+│   │   ├── App.jsx              # Main app component
+│   │   ├── main.jsx             # Entry point
+│   │   ├── index.css            # Global styles
+│   │   ├── api/
+│   │   │   └── weatherApi.js    # API service layer
+│   │   ├── components/
+│   │   │   ├── CurrentWeather/   # Current conditions display
+│   │   │   ├── ForecastCards/    # Forecast cards component
+│   │   │   ├── HourlyForecast/   # Hourly forecast view
+│   │   │   ├── SearchBar/        # Location search input
+│   │   │   ├── SectorInsights/   # Sector analysis component
+│   │   │   └── TrendCharts/      # Weather trend visualization
+│   │   ├── context/
+│   │   │   └── ThemeContext.jsx # Theme state management
+│   │   ├── hooks/
+│   │   │   └── useDebounce.js   # Debounce hook for search
+│   │   ├── assets/               # Static assets
+│   │   └── public/               # Public assets
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   ├── eslint.config.js
+│   ├── postcss.config.js
+│   └── index.html
+│
+├── .env                          # Environment variables
+└── README.md                     # This file
